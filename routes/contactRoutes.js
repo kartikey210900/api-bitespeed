@@ -13,6 +13,11 @@ router.post("/", async (req, res) => {
         .json({ error: "Email or phone number is required" });
     }
 
+    // Handle GET /identify
+    router.get("/", (req, res) => {
+      res.json({ message: "GET /identify works!" });
+    });
+
     let existingContacts = await Contact.findAll({
       where: {
         [Op.or]: [{ email }, { phoneNumber }],
