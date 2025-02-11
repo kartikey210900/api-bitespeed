@@ -15,6 +15,9 @@ app.use(bodyParser.json());
 app.use("/identify", contactRoutes);
 
 const PORT = process.env.PORT || 3000;
+app.get("/", (req, res) => {
+  res.send("Server is running successfully! 🚀");
+});
 
 sequelize
   .authenticate()
