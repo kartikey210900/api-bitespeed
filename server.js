@@ -10,8 +10,7 @@ require("dotenv").config();
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.json());
-
+app.use(express.json()); // Enable JSON body parsing
 app.use("/identify", contactRoutes);
 
 const PORT = process.env.PORT || 3000;

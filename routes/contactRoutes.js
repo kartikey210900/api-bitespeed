@@ -2,7 +2,9 @@ const express = require("express");
 const { Op } = require("sequelize");
 const router = express.Router();
 const Contact = require("../models/Contact");
-
+router.get("/", (req, res) => {
+  res.json({ message: "GET /identify works!" });
+});
 router.post("/", async (req, res) => {
   try {
     const { email, phoneNumber } = req.body;
@@ -14,9 +16,6 @@ router.post("/", async (req, res) => {
     }
 
     // Handle GET /identify
-    router.get("/", (req, res) => {
-      res.json({ message: "GET /identify works!" });
-    });
 
     let existingContacts = await Contact.findAll({
       where: {
