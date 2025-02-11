@@ -30,7 +30,7 @@ npm install
 ```
 
 ### **3️⃣ Setup Environment Variables**
-Create a `.env` file and add the following:
+Create a `.env` file and add the following:--Add your Postgresql server 
 ```env
 DB_URL=postgresql://your_db_user:your_db_password@your_db_host/your_db_name
 PORT=3000
@@ -69,16 +69,8 @@ node server.js
   }
   ```
 
-## 📡 Deployment
-This project is deployed on **Render**.
-To deploy:
-1. Push code to GitHub.
-2. Connect Render with your repo.
-3. Set up environment variables on Render.
-4. Deploy & monitor logs.
+
 
 ## 🤝 Contributing
 Feel free to fork the repo and submit PRs.
 
-## 📜 License
-This project is licensed under the MIT License.
