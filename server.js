@@ -5,7 +5,8 @@ const cors = require("cors");
 const contactRoutes = require("./routes/contactRoutes");
 const sequelize = require("./db");
 
-dotenv.config();
+require("dotenv").config();
+
 const app = express();
 
 app.use(cors());
